@@ -1,0 +1,11 @@
+**/bin
+**/obj
+**/node_modules
+**/dist
+.git
+.github
+.env*
+*.log
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts

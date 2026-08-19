@@ -1,0 +1,4 @@
+invoiceNumber,date,netAmount,vatRate
+INV-001,19/08/2026,1000,27
+INV-002,2026-08-19,not-a-number,27
+INV-003,2026-08-19,1000,20

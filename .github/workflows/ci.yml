@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore backend
+        run: dotnet restore backend/TaxDesk.Api.Tests/TaxDesk.Api.Tests.csproj --configfile NuGet.Config
+
+      - name: Test backend
+        run: dotnet test backend/TaxDesk.Api.Tests/TaxDesk.Api.Tests.csproj --configuration Release --no-restore
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm ci && npm run build
+
+      - name: Build container
+        run: docker build --tag taxdesk-vat-generator:ci .
