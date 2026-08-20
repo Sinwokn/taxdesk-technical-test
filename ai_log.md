@@ -82,7 +82,7 @@ The source brief did not specify a transaction-file schema, currency, rounding p
 - [x] JSON and PDF HTTP endpoints smoke-tested.
 - [x] Production Docker image built and tested with valid, invalid, and Hungarian-locale samples.
 - [x] Initial UI and generated PDF rendered and visually inspected.
-- [x] Public deployment URL verified after repository publication.
+- [x] Public deployment URL verified after repository publication. [CLICK HERE](https://taxdesk.matteobernardi.fr/)
 
 ## Tools used
 
