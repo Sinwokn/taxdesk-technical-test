@@ -82,11 +82,11 @@ The source brief did not specify a transaction-file schema, currency, rounding p
 - [x] JSON and PDF HTTP endpoints smoke-tested.
 - [x] Production Docker image built and tested with valid, invalid, and Hungarian-locale samples.
 - [x] Initial UI and generated PDF rendered and visually inspected.
-- [ ] Public deployment URL verified after repository publication.
+- [x] Public deployment URL verified after repository publication.
 
 ## Tools used
 
-- OpenAI Codex for architecture discussion, implementation support, review, and debugging.
+- OpenAI Codex (model used: 5.6 Sol) for architecture discussion, implementation support, review, and debugging.
 - .NET 8 SDK for build and xUnit tests.
 - Node.js/npm, TypeScript, and Vite for the frontend build.
 - Docker configuration for reproducible delivery.
